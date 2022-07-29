@@ -1,0 +1,38 @@
+mat-toolbar {
+    background: #673D9C;
+    color: white;
+}
+
+mat-sidenav {
+    margin: 16px;
+    width: 200px;
+    border-right: none;
+    background: #411579;
+    color: white;
+    border-radius: 10px;
+    padding: 16px;
+    text-align: center;
+} /* tamanho da barra lateral */
+
+.content {
+    height: calc(100vh - 98px);
+    border-radius: 10px;
+    margin: 16px;
+    margin-left: 32px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 2rem;
+    color: lightgray;
+}
+
+mat-sidenav-container {
+    height: calc(100vh - 65px);
+} /* tamanho da máximo do encaixe barra lateral */
+
+.button-text {
+    padding-left: 10px;
+    padding-right: 20px; /* Add 24px to align the text in the center since the icon's width is 24px */
+}

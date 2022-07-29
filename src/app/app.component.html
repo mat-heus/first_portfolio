@@ -1,0 +1,51 @@
+<!-- IPágina principal, onde está montada a estrutura do site -->
+
+<mat-toolbar> <!-- Parte do menu -->
+
+<button mat-icon-button class="menu-button" *ngIf="sidenav.mode === 'over'" (click)="sidenav.toggle()">
+        <mat-icon *ngIf="!sidenav.opened">
+            menu
+        </mat-icon>
+        <mat-icon *ngIf="sidenav.opened">
+            close
+        </mat-icon>
+</button>
+
+ <div>
+    Portfólio Pessoal - Matheus Rodrigues
+</div>
+
+</mat-toolbar>
+
+<mat-sidenav-container> <!-- barra lateral -->
+    <mat-sidenav #sidenav="matSidenav"  id="barra" class="mat-elevation-z8" mode="over">
+      <button mat-button class="menu-button" routerLink="/home">
+            <mat-icon>home</mat-icon>
+            <span class="button-text">Início</span>
+        </button>
+        <button mat-button class="menu-button" routerLink="/about">
+            <mat-icon>person</mat-icon>
+           <span class="button-text">Sobre mim</span>
+        </button>
+        <button mat-button class="menu-button" routerLink="/education">
+            <mat-icon>school</mat-icon>
+           <span class="button-text">Formação</span>
+        </button>
+        <button mat-button class="menu-button" routerLink="/portfolio">
+            <mat-icon>work</mat-icon>
+           <span class="button-text">Trabalhos</span>
+        </button>
+
+        <mat-divider></mat-divider>
+
+        <button mat-button class="menu-button" routerLink="/contact">
+            <mat-icon>email</mat-icon>
+           <span class="button-text">Contato</span>
+        </button>
+    </mat-sidenav>
+    <mat-sidenav-content> <!-- conteúdo da parte em branco em destaque -->
+        <div class="content mat-elevation-z8">
+        <router-outlet></router-outlet>
+        </div>
+    </mat-sidenav-content>
+</mat-sidenav-container>
